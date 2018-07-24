@@ -1,0 +1,153 @@
+
+
+
+
+
+
+
+
+
+
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>天津滨海新区客流统计系统</title>
+<link href="http://60.29.214.35:9999/klxt/css/layout.css" rel="stylesheet" type="text/css" />
+<link href="http://60.29.214.35:9999/klxt/css/sub.css" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" type="text/css" href="http://60.29.214.35:9999/klxt/themes/default/easyui.css">
+<link rel="stylesheet" type="text/css" href="http://60.29.214.35:9999/klxt/themes/icon.css">
+<script language='JavaScript' type='text/JavaScript' src='http://60.29.214.35:9999/klxt/scripts/jquery/jquery-1.6.2.min.js'></script>
+<script language='JavaScript' type='text/JavaScript' src='http://60.29.214.35:9999/klxt/scripts/common/jquery.common.js' charset="UTF-8"></script>
+<script type="text/javascript" src="http://60.29.214.35:9999/klxt/js/tabjquery.js"></script>
+<script type="text/javascript" src="http://60.29.214.35:9999/klxt/js/jquery.pngFix.js"></script>
+<script type="text/javascript" src="http://60.29.214.35:9999/klxt/js/base.js"></script>
+<script type="text/javascript" src="http://60.29.214.35:9999/klxt/js/drag.js"></script>
+<script language='JavaScript' type="text/javascript" src="http://60.29.214.35:9999/klxt/scripts/jquery/jquery.easyui.min.js"></script>
+<script language='JavaScript' type="text/javascript" src="http://60.29.214.35:9999/klxt/scripts/jquery/easyui-lang-zh_CN.js"></script>
+<script type="text/javascript">
+function logout(){
+	$.messager.confirm('信息对话框', '是否退出本系统 ？', function(r){
+		if (r){
+			top.location="http://60.29.214.35:9999/klxt//noauth/logon/logout.do";
+		}else{
+           return false;
+		}
+	});
+}
+</script>
+</head>
+<body>
+<table width="100%" border="0" cellpadding="0" cellspacing="0" height="100%" >
+	<tr class="trTop">
+		<td>
+		  <div class="top">
+				<div class="logo filtpng"><img src="http://60.29.214.35:9999/klxt/images/logo.png"></div>
+				<div class="topMenu">
+					<ul class="topul">
+						<li> <a href="systemwelcome.do" target="mainframe"> <span class="topMenuI filtpng"><img src="http://60.29.214.35:9999/klxt/images/ico/topMenu1.png"></span> <span class="topMenuF">我的主页</span> </a> </li>
+					
+						<li> <a href="systemwelcome.do" target="mainframe"> <span class="topMenuI filtpng"><img src="http://60.29.214.35:9999/klxt/images/ico/topMenu2.png"></span> <span class="topMenuF">统计分析</span> </a> </li>
+						<li> <a href="systemwelcome.do" target="mainframe"> <span class="topMenuI filtpng"><img src="http://60.29.214.35:9999/klxt/images/ico/topMenu5.png"></span> <span class="topMenuF">消息管理</span> </a> </li>
+						<li> <a href="systemwelcome.do" target="mainframe"> <span class="topMenuI filtpng"><img src="http://60.29.214.35:9999/klxt/images/ico/topMenu3.png"></span> <span class="topMenuF">系统管理</span> </a> </li> 
+			
+						<li> <a href="#" onclick="logout();"> <span class="topMenuI filtpng"><img src="http://60.29.214.35:9999/klxt/images/ico/topMenu4.png"></span> <span class="topMenuF">用户注销</span> </a> </li>
+					</ul>
+				</div>
+			</div>
+	   </td>
+	</tr>
+	<tr>
+		<td>
+		  <table width="100%" height="100%">
+				<tr>
+					<td  class="tdConL">
+					<table width="100%" height="100%">
+							<tr class="trUser">
+								<td ><div class="user filtpng"><img src="http://60.29.214.35:9999/klxt/images/ico/man.png"> <span class="userName">欢迎您！bhgj</span> </div></td>
+							</tr>
+							<tr><td>	<div class="leftNav">			  <ul class="leftNavul filtpng">					<li class="leftNavli"> <a href="javascript:void(0)" target="mainframe"><img src="http://60.29.214.35:9999/klxt/images/ico/leftIco1.png" align="absmiddle"><span>到离站信息</span></a>						<ul class="leftNavli_ul">						    <li><a href="http://60.29.214.35:9999/klxt/auth/station/list.do?flag=1" target="mainframe">到离站查询</a></li>						    <li><a href="http://60.29.214.35:9999/klxt/auth/stationTime/list.do?flag=1" target="mainframe">定时定距查询</a></li>						    <li><a href="http://60.29.214.35:9999/klxt/auth/station/simplelist.do?flag=1" target="mainframe">客流明细查询</a></li>	                   </ul>					</li>				</ul>			  <ul class="leftNavul filtpng">					<li class="leftNavli"> <a href="javascript:void(0)" target="mainframe"><img src="http://60.29.214.35:9999/klxt/images/ico/leftIco1.png" align="absmiddle"><span>统计图表</span></a>						<ul class="leftNavli_ul">						    <li><a href="http://60.29.214.35:9999/klxt/auth/station/flowTrend.do" target="mainframe">客流量趋势</a></li>						    <li><a href="http://60.29.214.35:9999/klxt/auth/station/flowTimeDistribute.do" target="mainframe">客流时间分布</a></li>						    <li><a href="http://60.29.214.35:9999/klxt/auth/station/flowStationDistribute.do" target="mainframe">客流站点分布</a></li>	                   </ul>					</li>				</ul>			  <ul class="leftNavul filtpng">					<li class="leftNavli"> <a href="javascript:void(0)" target="mainframe"><img src="http://60.29.214.35:9999/klxt/images/ico/leftIco1.png" align="absmiddle"><span>基础信息</span></a>						<ul class="leftNavli_ul">						    <li><a href="http://60.29.214.35:9999/klxt/auth/roadInfo/list.do" target="mainframe">线路信息</a></li>	                   </ul>					</li>				</ul>			  <ul class="leftNavul filtpng">					<li class="leftNavli"> <a href="javascript:void(0)" target="mainframe"><img src="http://60.29.214.35:9999/klxt/images/ico/leftIco1.png" align="absmiddle"><span>系统分析</span></a>						<ul class="leftNavli_ul">						    <li><a href="http://60.29.214.35:9999/klxt#" target="mainframe">营收管理</a></li>						    <li><a href="http://60.29.214.35:9999/klxt#" target="mainframe">线网规划</a></li>	                   </ul>					</li>				</ul>			  <ul class="leftNavul filtpng">					<li class="leftNavli"> <a href="javascript:void(0)" target="mainframe"><img src="http://60.29.214.35:9999/klxt/images/ico/leftIco1.png" align="absmiddle"><span>系统管理</span></a>						<ul class="leftNavli_ul">						    <li><a href="http://60.29.214.35:9999/klxt/auth/department/list.do" target="mainframe">部门管理</a></li>						    <li><a href="http://60.29.214.35:9999/klxt/auth/empbaseinfo/list.do" target="mainframe">用户管理</a></li>						    <li><a href="http://60.29.214.35:9999/klxt/auth/role/list.do" target="mainframe">角色管理</a></li>						    <li><a href="http://60.29.214.35:9999/klxt/auth/power/powerList.do" target="mainframe">权限管理</a></li>						    <li><a href="http://60.29.214.35:9999/klxt/auth/sitenode/menuList.do" target="mainframe">菜单管理</a></li>						    <li><a href="http://60.29.214.35:9999/klxt/systemwelcome.do" target="mainframe">字典管理</a></li>			</div>		</td>	</tr>
+						</table>
+						</td>
+					  <td class="tdArrow"><div class="arrow"><img src="http://60.29.214.35:9999/klxt/images/ico/arrowL.gif" ></div></td>
+					  <td><table width="100%" height="100%">
+							<tr class="trTab">
+								<td><div class="Stab">
+										<div class="StabL">
+											<ul class="StabLul">
+											</ul>
+										</div>
+										<div class="StabR">
+											<div class="StabRa"></div>
+											<div class="StabRb"></div>
+										</div>
+									</div></td>
+							</tr>
+							<tr>
+								<td><iframe name="mainframe" width="100%" height="100%" scrolling="no" frameborder="0" src="auth/station/list.do?flag=1"></iframe></td>
+							</tr>
+						</table></td>
+				</tr>
+			</table>
+			</td>
+	</tr>
+	<tr class="trFoot" >
+		<td><div class="foot">
+				<div class="footL">Copyright © 2012  All Rights Reserved. 苏科畅联   版权所有 <!--a target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=75926797&site=qq&menu=yes"><img border="0" src="http://wpa.qq.com/pa?p=2:75926797:41" alt="技术支持-董工" title="技术支持-董工"></a><a target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=412219808&site=qq&menu=yes"><img border="0" src="http://wpa.qq.com/pa?p=2:412219808:41" alt="技术支持-朱工" title="技术支持-朱工"></a--></div> 
+				<div class="footR filtpng"><div id="datetime"></div></div>
+			</div></td>
+	</tr>
+</table>
+<div class="bottomF">
+	<div class="bottomFt">
+		<div class="bottomFtL">用户个人信息</div>
+		<div class="bottomFtR"><img src="http://60.29.214.35:9999/klxt/images/StabLImg2.gif"></div>
+	</div>
+	<div class="bottomFc">
+		<ul class="bottomFcul">
+		    <li>单位名称:</li>
+			<li>用户名称:bhgj</li> 
+			<li>用户IP:163.179.125.109</li>
+		</ul>
+	</div>
+</div>
+</body>
+<script type="text/javascript">
+		$(document).ready(function(){
+			$(".bottomF").show();
+			$(".bottomF").animate({"bottom":"31px"})
+			
+			$(".bottomFtR").click(function(){
+				
+				$(".bottomF").animate({"bottom":"-340px"},function(){$(this).hide();});
+			});
+			var t=setTimeout("$('.bottomF').animate({'bottom':'-340px'},function(){$(this).hide()})",9000);
+        });
+</script>
+<script language="JavaScript">
+
+//单个数字配零
+ function getDouble(number){
+  var numbers=["0","1","2","3","4","5","6","7","8","9"];
+  for(var i=0;i<numbers.length;i++){
+   if(numbers[i]==number){
+    return "0"+numbers[i];
+   }else if(i==9){
+    return number;
+   }
+   
+  }
+ }
+//得到当天时间
+ function getTodayTime(){
+  var days=["星期日","星期一","星期二","星期三","星期四","星期五","星期六"];
+  var today=new Date();
+  var str= (today.getYear()<1900?1900+today.getYear():today.getYear())+"年" + getDouble([today.getMonth()+1])+"月" +getDouble(today.getDate()) +"日 &nbsp;"+ days[today.getDay()]+"&nbsp;&nbsp;"+getDouble(today.getHours())+":"+getDouble(today.getMinutes())+":"+getDouble(today.getSeconds());
+  document.getElementById('datetime').innerHTML=str;
+  
+ }
+//每隔一秒刷新一次
+ setInterval("getTodayTime()",1000);
+</script>
+</html>
+
+

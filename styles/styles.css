@@ -1,0 +1,117 @@
+body {
+    background-color: white;//powderblue;
+}
+
+.logotop{
+	background-color:white;
+}
+.logotop img{
+	border:0;
+	height:100%;
+	
+}
+
+.logotop ul{
+	float:right;
+	padding-right:30px;
+	list-style-type: none;
+	margin:	0;
+	overflow: hidden;
+}
+.logotop ul li{
+	float:left;
+	padding-left:20px;
+	line-height:15px;
+	font-size:10px;
+	height:100%;
+}
+.logotop span{
+	font-size:300%;
+}
+
+.bodytop{
+	background-color:powderblue;
+	height:20px;
+}
+
+
+.state,.data{
+	border-collapse:collapse;
+	//background-color:powderblue
+	margin-top:10px;
+}
+.state td,.data td{
+	border:1px solid #dddddd;
+	padding:20px;
+	text-align:center;
+}
+.state th,.data th{
+	border:1px solid #dddddd;
+	padding:10px;
+	text-align:center;
+}
+
+
+div.container {
+	width: 100%;
+	border: 1px solid gray;
+}
+
+header, footer {
+	padding: 0.1em;//相对本工程内字体的相对长度
+	color: white;
+	background-color: powderblue;
+	clear: left;
+	//text-align: center;
+	height:20px;
+	margin-left:0px;
+}
+
+nav {
+	float: left;
+	max-width: 160px;
+	margin: 0;
+	padding: 1em;
+}
+
+nav ul {
+	list-style-type: none;
+	padding: 0;
+	margin-top:100px;
+	font-size:25px;
+	text-align: center;
+	line-height:60px;
+}
+	
+nav ul a {
+	text-decoration: none;
+	padding:10px;
+}
+
+article {
+	margin-left: 170px;
+	border-left: 1px solid gray;
+	padding: 1em;
+	overflow: hidden;
+	width:1000px;
+}
+
+.panel-group{
+	margin-top:20px;
+}
+.videodiv{
+	margin-top:20px;
+}
+
+.panel-heading{
+	text-align:center;
+}
+
+
+
+.footerbm{
+	text-align:center;
+	background-color:powderblue;
+	float:bottom;
+}
+

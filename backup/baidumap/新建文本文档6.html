@@ -1,0 +1,59 @@
+<script src='http://api.map.baidu.com/api?v=2.0&ak=wqBXfIN3HkpM1AHKWujjCdsi' type='text/javascript'></script>
+    <div style="width:98%;margin: 0 auto;">
+        <form action="" method="post">
+            <dl>
+                <dd>
+                    <p>地图定位：</p>
+                    <div id="allmap" style="height:450px"></div>
+                    <input type="hidden" id="lng" name="lng" value="" />
+                    <input type="hidden" id="lat"  name="lat" value="" />
+                </dd>
+            </dl>
+        </form>
+    </div>
+    <script type="text/javascript">  
+     
+    navigator.geolocation.getCurrentPosition( // 该函数有如下三个参数
+        function(pos){ // 如果成果则执行该回调函数
+            var map = new BMap.Map("allmap");
+ 
+            map.enableContinuousZoom();    //启用地图惯性拖拽，默认禁用
+            map.enableScrollWheelZoom(true);
+            var top_left_control = new BMap.ScaleControl({anchor: BMAP_ANCHOR_TOP_LEFT});// 左上角，添加比例尺
+            var top_left_navigation = new BMap.NavigationControl();
+            map.addControl(top_left_control);
+            map.addControl(top_left_navigation);
+ 
+            var lat = pos.coords.latitude;
+            var lng = pos.coords.longitude;
+ 
+            lng = lng ? lng : 111.55931854248;
+            lat = lat ? lat : 40.86986923218;
+ 
+            var myGeo = new BMap.Geocoder();
+            map.centerAndZoom(new BMap.Point(lng, lat), 20);
+            var npoint = new BMap.Point(lng,lat)
+            var marker = new BMap.Marker(npoint);  // 创建标注
+            map.addOverlay(marker);              // 将标注添加到地图中
+            map.panTo(npoint); 
+            function showInfo(e){
+                $("#lng").val(e.point.lng)
+                $("#lat").val(e.point.lat)
+                map.clearOverlays(); 
+                var new_point = new BMap.Point(e.point.lng,e.point.lat)
+                var marker = new BMap.Marker(new_point);  // 创建标注
+                map.addOverlay(marker);              // 将标注添加到地图中
+                map.panTo(new_point); 
+            }
+            map.addEventListener("click", showInfo);
+        }, function(err){ // 如果失败则执行该回调函数
+            alert(err.message);
+        }, { // 附带参数
+            enableHighAccuracy: false, // 提高精度(耗费资源)
+            timeout: 3000, // 超过timeout则调用失败的回调函数
+            maximumAge: 1000 // 获取到的地理信息的有效期，超过有效期则重新获取一次位置信息
+        }
+    );
+         
+     
+    </script>

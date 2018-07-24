@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<style>
+			div.container{
+				width:100%;
+				<!--border:1px solid gray;-->
+			}
+
+			footer{
+				padding:1em;
+				color:black;
+				background-color: white;
+				clear: left;
+				text-align: center;
+			}
+		</style>
+	</head>
+
+
+	<body>
+		<div class="container">
+		<form action="index.html" target="_self">
+			<fieldset>
+				<legend>用户登录</legend><br>
+				用户名:<br>
+				<input type="text" name="username" value="mzc" size="27" maxlength="16" minlength="2"><br>
+				密码:<br>
+				<input type="password" name="psw" value="123456" size="27" maxlength="16" minlength="6"><br><br>
+				<input type="checkbox" name="remember1" value="rem">Remember the password<br>
+				<input type="checkbox" name="visitor" value="vist">Login as a visitor<br><br>
+				<input type="submit" value="注册">
+				<input type="button" value="登录" onclick="alert('登录成功')">
+			</fieldset>
+		</form>
+		</div>
+
+		<div>
+		<footer>Copyright &copy; mzc 
+				<a href="https://www.baidu.com" target="_blank">https://www.baidu.com</a>
+		</footer>
+		</div>
+	</body>
+</html>
